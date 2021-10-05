@@ -38,6 +38,12 @@ checkstyle {
 	checkstyleTest.enabled = false
 }
 
+tasks.withType(Checkstyle) {
+	reports {
+		html.enabled = true
+	}
+}
+
 task acceptanceTest(type: Test) {
 	include '**/acceptance/**'
 	systemProperties System.getProperties()
