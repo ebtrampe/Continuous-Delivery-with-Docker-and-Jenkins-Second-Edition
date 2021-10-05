@@ -38,13 +38,6 @@ checkstyle {
 	checkstyleTest.enabled = false
 }
 
-task.withType(Checkstyle) {
-	ignoreFailures = true 
-	reports {
-		html.enabled = true
-	}
-}
-
 task acceptanceTest(type: Test) {
 	include '**/acceptance/**'
 	systemProperties System.getProperties()
